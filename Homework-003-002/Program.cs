@@ -1,4 +1,6 @@
 ﻿
+using System.Globalization;
+
 int[] FillArray(int size)
 {
     int[] array = new int[size];
@@ -17,25 +19,24 @@ void PrintArray(int[] Array)
     }
 }
 
-int[] FindNumbersFrom20to90(int[] Array)
+int FindNumbersFrom20to90(int[] Array)
 {
+    int count = 0;
     for (int i = 0; i < Array.Length; i++)
     {
-
-        if (Array[i] > 19 && Array[i] < 91)
+        if (Array[i] % 2 ==0)
         {
-            Console.WriteLine(Array[i]);
+    
+            count++;
+
         }
+
     }
     return count;
 }
-
-int count = 1;
-while 
 
 int arrayLength = 10;
 int[] NewArray = FillArray(arrayLength);
 PrintArray(NewArray);
 Console.WriteLine();
-int[] numbers = FindNumbersFrom20to90(NewArray);
-
+Console.WriteLine($"Результат: {FindNumbersFrom20to90(NewArray)}");
