@@ -35,18 +35,23 @@ double MaxMinusMin(double[] Array)
             Max = Array[i];
 
         }
-        // Console.WriteLine($"MAX: {Max}");
-    }
-
-    for (int i = 0; i < Array.Length; i++)
-    {
-        if (Array[i] < Min)
+        else if(Array[i] < Min)
         {
             Min = Array[i];
 
         }
-        // Console.WriteLine($"MIN: {Min}");
+        Console.WriteLine($"MIN: {Min}, {Max}");
     }
+
+    // for (int i = 0; i < Array.Length; i++)
+    // {
+    //     if (Array[i] < Min)
+    //     {
+    //         Min = Array[i];
+
+    //     }
+    //     // Console.WriteLine($"MIN: {Min}");
+    // }
 
     result = Max - Min;
 
